@@ -68,8 +68,13 @@ angular.module("todoapp")
     $scope.deleteTodo = function(index) {
 
         todo = $scope.todos[index]
+        // alert(todo.id);
         Todo.delete(todo)
         $scope.todos.splice(index, 1);
+    }
+    $scope.editTodo = function (index) {
+        todoedit = $scope.todos[index]
+        window.open("#/"+todoedit.id+"/edit");
     }
 });
 

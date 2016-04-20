@@ -14,6 +14,14 @@ class TodosController < ApplicationController
     # end
   end
 
+  def show
+    @todo = Todo.find(params[:id])
+    logger.debug "Response! #{@todo.to_json}"
+    respond_to do |format|
+      format.json {render json: @todo}
+    end
+  end
+
   def create
     Todo.transaction do
       @todo = Todo.new(todo_params)
@@ -24,7 +32,9 @@ class TodosController < ApplicationController
         end
       end
   end
-
+  # def edit
+  #   @todo = Todo.new
+  # end
   def update
     @todo.update!(todo_params)
     respond_to do |format|

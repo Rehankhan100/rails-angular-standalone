@@ -1,2 +1,20 @@
 <h2>Edit Page</h2>
-{{message}}
+{{editTodo.name}}
+{{editTodo.description}}
+
+<form ng-submit="editTodo()">
+    <div class="row">
+        <div class="col-xs-6">
+            <input type="text" ng-model="todos.name"  class="form-control" placeholder="Name" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" ng-model="todos.description"  class="form-control" placeholder="Description" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <br />
+            <input type="Submit" value="update Todo" class="btn btn-primary" />
+        </div>
+    </div>
+</form>

@@ -3,7 +3,7 @@ var todoapp = angular.module("todoapp", ['ngRoute','ngResource']);
       todoapp.config(['$routeProvider', function($routeProvider) {
          $routeProvider.
 
-         when('/edit', {
+         when('/:id/edit', {
             templateUrl: 'app/views/edit.html',
             controller: 'EditTodoController'
          }).
