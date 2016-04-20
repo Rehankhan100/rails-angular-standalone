@@ -1,4 +1,4 @@
-CRUD APPLICATION WITH RAILS & ANGULAR JS STANDALONE
+==CRUD APPLICATION WITH RAILS & ANGULAR JS STANDALONE
 
 This is the basic crud system without GUI and it is just for introduction or learning purpose, how to integrate angular with rails and this is standalone
 angular js application no rails gem use.
@@ -13,3 +13,5 @@ Note: sqlite database
 * rake db:migrate (Migrate Database or Tables)
 
 * rails s (for start server)
+
+for any kind of help regarding ruby on rails feel free to contact
