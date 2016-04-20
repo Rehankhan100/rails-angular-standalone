@@ -19,7 +19,8 @@
     <tr ng-show="!todos.length">
       <td colspan="4">No visitors in the building.</td>
     </tr>
-    <tr ng-repeat="todo in todos">
+    <input placeholder = "Search Todo Name" ng-model="searchText">
+    <tr ng-repeat="todo in todos | filter:searchText">
       <td>{{ todo.name }}</td>
       <td>{{ todo.description }}</td>
       <td><a class="btn btn-danger" ng-click="deleteTodo($index)">Remove</a></td>
