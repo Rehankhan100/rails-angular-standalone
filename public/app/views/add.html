@@ -1,2 +1,29 @@
 <h2>Add Page</h2>
-{{message}}
+
+<div class="container">
+    <h1>Todo</h1>
+
+    <div>
+        <div class="well">
+            <h3>Add a new Todo</h3>
+            <form ng-submit="addTodo()">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <input type="text" ng-model="newTodo.name" class="form-control" placeholder="Name" />
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="text" ng-model="newTodo.description" class="form-control" placeholder="Description" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <br />
+                        <input type="Submit" value="Add Todo" class="btn btn-primary" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+

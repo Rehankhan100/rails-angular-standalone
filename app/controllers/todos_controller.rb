@@ -15,27 +15,28 @@ class TodosController < ApplicationController
   end
 
   def create
-
-  end
-
-  def show
-
-  end
-
-  def new
-
-  end
-
-  def edit
-
+    Todo.transaction do
+      @todo = Todo.new(todo_params)
+      if @todo.save
+        render json: @todo
+      else
+        render json: @todo.errors
+        end
+      end
   end
 
   def update
-
+    @todo.update!(todo_params)
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 
-  def destory
-
+  def destroy
+    @todo.destroy!
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 
   private

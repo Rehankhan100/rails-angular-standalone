@@ -4,4 +4,26 @@
 <p>
   {{post.description}}
 </p>
+
+  <h3>Currently Todo</h3>
+  <hr />
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-show="!todos.length">
+      <td colspan="4">No visitors in the building.</td>
+    </tr>
+    <tr ng-repeat="todo in todos">
+      <td>{{ todo.name }}</td>
+      <td>{{ todo.description }}</td>
+      <td><a class="btn btn-danger" ng-click="deleteTodo($index)">Remove</a></td>
+    </tr>
+    </tbody>
+  </table>
 </div>
