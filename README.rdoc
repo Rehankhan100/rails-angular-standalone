@@ -1,28 +1,15 @@
-== README
+CRUD APPLICATION WITH RAILS & ANGULAR JS STANDALONE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the basic crud system without GUI and it is just for introduction or learning purpose, how to integrate angular with rails and this is standalone
+angular js application no rails gem use.
 
-Things you may want to cover:
+Things you need to done before try this:
 
-* Ruby version
+* bundle install (Install all gem packages)
 
-* System dependencies
+* rake db:create (Create database)
+Note: sqlite database
 
-* Configuration
+* rake db:migrate (Migrate Database or Tables)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* rails s (for start server)
